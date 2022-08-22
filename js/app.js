@@ -44,5 +44,16 @@ function currentsubTotal(){
    const currentsubTotal = parseFloat(toatlPhnPrice.innerText) + parseFloat(totalCasePrice.innerText)
    const subTotal = document.getElementById('sub-total')
     subTotal.innerText = currentsubTotal
+
+// tex
+    const tex = document.getElementById('tex')
+    const texAmount = (currentsubTotal * 0.01).toFixed(2)
+    const textAmountNum = parseFloat(texAmount)
+    tex.innerText = textAmountNum
+//final-total
+    const finalTotal = document.getElementById('final-total')
+    const finalTotalPrice  = textAmountNum + currentsubTotal
+
+    finalTotal.innerText = finalTotalPrice
    
 }
